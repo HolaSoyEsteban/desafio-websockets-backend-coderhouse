@@ -77,8 +77,10 @@ router.post('/', async (req, res) => {
   
     products.push(newProduct);
   
-    await fs.promises.writeFile(filePathProducts, JSON.stringify(products, null, 2));
-  
+    await fs.promises.writeFile(filePathProducts, JSON.stringify(products, null, 2)); // Escribe el archivo con la lista de productos actualizada
+    
+    req.io.emit('updatedProducts', products) // emite el evento updatedProducts con la lista de productos
+
     res.status(201).json(newProduct);
   } catch (error) {
     console.log('Error al leer/escribir el archivo:', error);
@@ -109,6 +111,8 @@ router.put('/:pid', async (req, res) => {
 
     await fs.promises.writeFile(filePathProducts, JSON.stringify(products, null, 2));
 
+    req.io.emit('updatedProducts', products) // emite el evento updatedProducts con la lista de productos
+
     res.status(200).json(updatedProduct);
   } catch (error) {
     console.log('Error al leer/escribir el archivo:', error);
@@ -125,6 +129,9 @@ router.delete('/:pid', async (req, res) => {
     if (productIndex != -1) {
       products.splice(productIndex, 1);
       await fs.promises.writeFile(filePathProducts,JSON.stringify(products, null, 2));
+
+      req.io.emit('updatedProducts', products) // emite el evento updatedProducts con la lista de productos
+
       res.status(204).json({ message: 'Producto eliminado' });
     } else {
       res.status(404).json({ error: 'Producto no encontrado' });

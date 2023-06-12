@@ -34,5 +34,60 @@
     "stock": "20",
     "category": "Comics",
     "thumbnails": []
+  },
+  {
+    "id": 4,
+    "title": "Comic Spiderman #4",
+    "description": "Comic de Spiderman",
+    "code": "comic-spiderman#4",
+    "price": "5000",
+    "status": true,
+    "stock": "10",
+    "category": "Comics",
+    "thumbnails": []
+  },
+  {
+    "id": 5,
+    "title": "Rocket Raccoon",
+    "description": "Peluche a escala",
+    "code": "peluche-esc1/1-rocket",
+    "price": "20000",
+    "status": true,
+    "stock": "30",
+    "category": "peluche",
+    "thumbnails": []
+  },
+  {
+    "id": 6,
+    "title": "IT",
+    "description": "Libro de Stephen King",
+    "code": "libro-terror-SK-IT",
+    "price": 2500,
+    "status": true,
+    "stock": "30",
+    "category": "Libros",
+    "thumbnails": []
+  },
+  {
+    "id": 7,
+    "title": "Harry Potter 1",
+    "description": "DVD de Harry Potter",
+    "code": "DVD-HarryP-1",
+    "price": "1000",
+    "status": true,
+    "stock": "50",
+    "category": "Peliculas",
+    "thumbnails": []
+  },
+  {
+    "id": 8,
+    "title": "Stranger Things Serie Completa",
+    "description": "La serie completa de Stranger Things en DVD",
+    "code": "DVD-StrangerT-12345",
+    "price": "15000",
+    "status": true,
+    "stock": "50",
+    "category": "Peliculas",
+    "thumbnails": []
   }
 ]
