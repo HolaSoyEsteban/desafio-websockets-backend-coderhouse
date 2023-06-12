@@ -23,5 +23,16 @@
     "stock": 100,
     "category": "ActualizandoPorPUT",
     "thumbnails": []
+  },
+  {
+    "id": 3,
+    "title": "Comic Avengers #2",
+    "description": "Comic de los Avengers",
+    "code": "comic-avengers#2",
+    "price": "4000",
+    "status": true,
+    "stock": "20",
+    "category": "Comics",
+    "thumbnails": []
   }
 ]
