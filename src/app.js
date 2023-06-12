@@ -34,8 +34,8 @@ app.use('/api/carts', cartsRouter); // registra el router de carritos en la ruta
 
 io.on('connection', socket => {
     console.log('Nuevo cliente conectado!')
-    socket.on('productList', data => {
-        io.emit('updatedProducts', data)
-    }) // evento que se ejecuta cuando se emite el evento productList
+    socket.on('updatedProducts', data => { 
+        io.emit('productList', data) // emite el evento productList con la lista de productos
+    }) // evento que se ejecuta cuando se actualiza la lista de productos
 }) // evento que se ejecuta cuando un cliente se conecta
 

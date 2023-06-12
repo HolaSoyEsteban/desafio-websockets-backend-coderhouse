@@ -29,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        {{#each products}}
+    {{#each products}}
         <tr>
             <td><button onclick="deleteProduct({{this.id}})">Eliminar</button></td>
             <td>{{this.title}}</td>
@@ -39,7 +39,7 @@
             <td>{{this.stock}}</td>
             <td>{{this.category}}</td>
         </tr>
-        {{/each}}
+    {{/each}}
     </tbody>
 </table>
 

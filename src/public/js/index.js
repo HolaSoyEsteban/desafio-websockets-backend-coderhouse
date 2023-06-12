@@ -41,13 +41,13 @@ deleteProduct = (id) => {
     fetch(`/api/products/${id}`, {
         method: 'DELETE', // método HTTP
     }) // fetch para eliminar un producto
-    .then(result => result.json()) // parsea el resultado a JSON
-    .then(result => {
-        if (result.status === 'error') throw new Error(result.error)
-        else socket.emit('productList', result.payload) // si no hubo error, emite el evento productList con la lista de productos
-        alert('Producto eliminado con éxito!')
-    }) // si el resultado es un error, lanza una excepción, si no, emite el evento productList con la lista de productos
-    .catch(error => alert(`Ocurrio un error : ${error}`)) // si hubo un error, muestra un alert con el error
+        .then(result => result.json()) // parsea el resultado a JSON
+        .then(result => {
+            if (result.status === 'error') throw new Error(result.error)
+            else socket.emit('productList', result.payload) // si no hubo error, emite el evento productList con la lista de productos
+            alert('Producto eliminado con éxito!')
+        })
+        .catch(error => alert(`Ocurrio un error : ${error}`)) // si hubo un error, muestra un alert con el error
 }
 
 socket.on('updatedProducts', data => {
